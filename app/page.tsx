@@ -30,7 +30,7 @@ export default function Home() {
       tag: "Live Demo"
     },
     {
-      title: "Apex Academy",
+      title: "Livetechindia Andheri",
       category: "EdTech & Coaching",
       description: "Trustworthy educational platform with course breakdowns and student inquiry capture.",
       link: "https://mydemoagency.vercel.app/demo/livetechindia-andheri",
