@@ -34,7 +34,7 @@ export default async function DynamicDemoPage({ params }) {
   };
 
   return (
-    <div className="relative pb-24">
+    <div className="relative">
       {renderTemplate()}
       <Watermark />
     </div>

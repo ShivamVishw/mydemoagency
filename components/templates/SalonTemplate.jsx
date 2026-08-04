@@ -329,8 +329,8 @@ export default function SalonTemplate({ businessName }) {
         </div>
       </section>
 
-      {/* Business Footer - Extended background to remove white gap */}
-      <footer className="bg-stone-950 text-stone-400 pt-12 md:pt-16 pb-32 md:pb-40 text-center md:text-left mt-12 rounded-t-3xl shadow-[0_-10px_40px_rgba(0,0,0,0.1)]">
+      {/* Business Footer - Flush & Deep */}
+      <footer className="bg-stone-950 text-stone-400 pt-16 pb-32 text-center md:text-left border-t border-stone-900">
         <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12 mb-8 border-b border-stone-800 pb-10 md:pb-12">
           <div>
             <h3 className="text-xl md:text-2xl font-serif text-amber-50 mb-4">{businessName}</h3>

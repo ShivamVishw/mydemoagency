@@ -185,40 +185,48 @@ export default function RealEstateTemplate({ businessName }) {
         </div>
       </section>
 
-      {/* Contact Section WITH WORKING FORM */}
-      <section id="contact" className="py-24 px-4 max-w-7xl mx-auto">
-        <div className="bg-white rounded-3xl overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.12)] border border-slate-100 flex flex-col md:flex-row">
+      {/* Contact Section - SEPARATED & HOVER ANIMATED */}
+      <section id="contact" className="py-12 md:py-24 px-4 max-w-7xl mx-auto">
+        <div className="flex flex-col md:flex-row gap-8 md:gap-12">
           
-          <div className="md:w-1/2 p-12 bg-blue-600 text-white flex flex-col justify-center relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-64 h-64 bg-white opacity-5 rounded-full blur-3xl -mr-20 -mt-20"></div>
-            <h2 className="text-4xl font-bold mb-6 relative z-10">Let's discuss your next move.</h2>
-            <p className="text-blue-100 mb-10 text-lg relative z-10">
-              Leave your details below and one of our senior property consultants will reach out to you within 24 hours.
-            </p>
-            
-            <div className="space-y-8 relative z-10">
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center text-xl">📍</div>
-                <div>
-                  <p className="font-semibold text-lg">Visit Our Office</p>
-                  <p className="text-blue-100">Bandra Kurla Complex, Mumbai</p>
+          {/* Left Side - Separated Card with Hover & Image Overlay */}
+          <motion.div 
+            whileHover={{ scale: 1.02 }}
+            transition={{ duration: 0.4 }}
+            className="w-full md:w-1/2 min-h-[400px] md:min-h-[500px] bg-cover bg-center rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] relative overflow-hidden cursor-pointer"
+            style={{ backgroundImage: "url('https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1000&q=80')" }}
+          >
+            <div className="absolute inset-0 bg-blue-900/85 flex flex-col justify-center p-8 md:p-12 text-white">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">Let's discuss your next move.</h2>
+              <p className="text-blue-100 mb-10 text-lg">
+                Leave your details below and one of our senior property consultants will reach out to you within 24 hours.
+              </p>
+              <div className="space-y-6">
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center text-xl">📍</div>
+                  <div>
+                    <p className="font-semibold text-lg">Visit Our Office</p>
+                    <p className="text-blue-100">Bandra Kurla Complex, Mumbai</p>
+                  </div>
                 </div>
-              </div>
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center text-xl">📞</div>
-                <div>
-                  <p className="font-semibold text-lg">Call Us Directly</p>
-                  <p className="text-blue-100">+91 98765 43210</p>
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center text-xl">📞</div>
+                  <div>
+                    <p className="font-semibold text-lg">Call Us Directly</p>
+                    <p className="text-blue-100">+91 98765 43210</p>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
 
-          <div className="md:w-1/2 p-12 bg-white">
-            {/* FormSubmit.co Integration - Sends directly to your email */}
+          {/* Form Side - Separated Card */}
+          <motion.div 
+            whileHover={{ y: -5 }}
+            transition={{ duration: 0.4 }}
+            className="w-full md:w-1/2 bg-white p-8 md:p-12 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] flex flex-col justify-center border border-slate-100"
+          >
             <form action="https://formsubmit.co/shivamvishwakarma1432@gmail.com" method="POST" className="space-y-6">
-              
-              {/* Hidden Inputs for FormSubmit Configuration */}
               <input type="hidden" name="_subject" value={`New Lead from ${businessName} Demo Site!`} />
               <input type="hidden" name="_captcha" value="false" />
               <input type="hidden" name="_template" value="table" />
@@ -226,37 +234,43 @@ export default function RealEstateTemplate({ businessName }) {
               <div className="grid grid-cols-2 gap-6">
                 <div>
                   <label className="block text-sm font-bold text-slate-700 mb-2">First Name</label>
-                  <input type="text" name="First Name" required className="w-full border border-slate-200 rounded-lg px-4 py-3 focus:outline-none focus:border-blue-600 focus:ring-1 focus:ring-blue-600 bg-slate-50" placeholder="John" />
+                  <input type="text" name="First Name" required className="w-full border border-slate-200 rounded-xl px-4 py-3 focus:outline-none focus:border-blue-600 focus:ring-1 focus:ring-blue-600 bg-slate-50 transition-all" placeholder="John" />
                 </div>
                 <div>
                   <label className="block text-sm font-bold text-slate-700 mb-2">Last Name</label>
-                  <input type="text" name="Last Name" required className="w-full border border-slate-200 rounded-lg px-4 py-3 focus:outline-none focus:border-blue-600 focus:ring-1 focus:ring-blue-600 bg-slate-50" placeholder="Doe" />
+                  <input type="text" name="Last Name" required className="w-full border border-slate-200 rounded-xl px-4 py-3 focus:outline-none focus:border-blue-600 focus:ring-1 focus:ring-blue-600 bg-slate-50 transition-all" placeholder="Doe" />
                 </div>
               </div>
               <div>
                 <label className="block text-sm font-bold text-slate-700 mb-2">Phone Number</label>
-                <input type="tel" name="Phone" required className="w-full border border-slate-200 rounded-lg px-4 py-3 focus:outline-none focus:border-blue-600 focus:ring-1 focus:ring-blue-600 bg-slate-50" placeholder="+91 00000 00000" />
+                <input type="tel" name="Phone" required className="w-full border border-slate-200 rounded-xl px-4 py-3 focus:outline-none focus:border-blue-600 focus:ring-1 focus:ring-blue-600 bg-slate-50 transition-all" placeholder="+91 00000 00000" />
               </div>
               <div>
                 <label className="block text-sm font-bold text-slate-700 mb-2">I am looking to...</label>
-                <select name="Service Requested" className="w-full border border-slate-200 rounded-lg px-4 py-3 focus:outline-none focus:border-blue-600 focus:ring-1 focus:ring-blue-600 bg-slate-50">
+                <select name="Service Requested" defaultValue="" className="w-full border border-slate-200 rounded-xl px-4 py-3 focus:outline-none focus:border-blue-600 focus:ring-1 focus:ring-blue-600 bg-slate-50 transition-all cursor-pointer">
+                  <option value="" disabled>Select Option</option>
                   <option value="Buy a property">Buy a property</option>
                   <option value="Sell a property">Sell a property</option>
                   <option value="Rent a property">Rent a property</option>
                   <option value="Consulting">Consulting</option>
                 </select>
               </div>
-              <button type="submit" className="w-full bg-slate-900 text-white font-bold py-4 rounded-lg hover:bg-slate-800 transition-colors shadow-lg mt-4">
+              <motion.button 
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                type="submit" 
+                className="w-full bg-slate-900 text-white font-bold py-4 rounded-xl hover:bg-slate-800 transition-all shadow-lg mt-4"
+              >
                 Request Callback
-              </button>
+              </motion.button>
             </form>
-          </div>
+          </motion.div>
 
         </div>
       </section>
-
-      {/* Business Footer */}
-      <footer className="bg-slate-950 text-slate-400 py-16 text-center md:text-left">
+      
+      {/* Business Footer - Flush & Deep */}
+      <footer className="bg-slate-950 text-slate-400 pt-16 pb-32 text-center md:text-left border-t border-slate-900">
         <div className="max-w-7xl mx-auto px-4 grid md:grid-cols-4 gap-8 mb-8">
           <div className="col-span-2">
             <h3 className="text-2xl font-bold text-white mb-4">{businessName}</h3>

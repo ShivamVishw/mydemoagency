@@ -212,15 +212,15 @@ export default function HotelTemplate({ businessName }) {
         </div>
       </section>
 
-      {/* Booking Form Section - SPLIT LAYOUT & FUNCTIONAL */}
+      {/* Booking Form Section - SEPARATED & HOVER ANIMATED */}
       <section id="book" className="py-12 md:py-24 px-4 max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row gap-8 md:gap-12">
           
-          {/* Image Side */}
+          {/* Image Side - Separated Card with Hover */}
           <motion.div 
             whileHover={{ scale: 1.02 }}
             transition={{ duration: 0.4 }}
-            className="w-full md:w-1/2 min-h-[400px] md:min-h-[600px] bg-cover bg-center rounded-sm shadow-[0_8px_30px_rgb(0,0,0,0.12)] cursor-pointer"
+            className="w-full md:w-1/2 min-h-[400px] md:min-h-[600px] bg-cover bg-center rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] cursor-pointer overflow-hidden"
             style={{ backgroundImage: "url('https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1000&q=80')" }}
           >
             <div className="w-full h-full bg-gradient-to-t from-zinc-900/80 to-transparent flex flex-col justify-end p-10">
@@ -229,11 +229,11 @@ export default function HotelTemplate({ businessName }) {
             </div>
           </motion.div>
 
-          {/* Form Side */}
+          {/* Form Side - Separated Card */}
           <motion.div 
             whileHover={{ y: -5 }}
             transition={{ duration: 0.4 }}
-            className="w-full md:w-1/2 bg-zinc-900 p-8 md:p-12 shadow-[0_8px_30px_rgb(0,0,0,0.15)] text-zinc-100 flex flex-col justify-center rounded-sm"
+            className="w-full md:w-1/2 bg-zinc-900 p-8 md:p-12 shadow-[0_8px_30px_rgb(0,0,0,0.15)] text-zinc-100 flex flex-col justify-center rounded-2xl border border-zinc-800"
           >
             <p className="text-amber-500 font-medium tracking-[0.2em] uppercase mb-2 md:mb-4 text-xs md:text-sm">Secure Your Stay</p>
             <h2 className="text-3xl md:text-4xl font-serif mb-6 md:mb-8">Reservation Request</h2>
@@ -246,22 +246,22 @@ export default function HotelTemplate({ businessName }) {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
                 <div>
                   <label className="block text-xs font-medium tracking-widest uppercase text-zinc-400 mb-2">First Name</label>
-                  <input type="text" name="First Name" required className="w-full bg-zinc-800 border border-zinc-700 text-white px-4 py-3 text-sm focus:outline-none focus:border-amber-500 focus:bg-zinc-700 transition-all rounded-none" />
+                  <input type="text" name="First Name" required className="w-full bg-zinc-800 border border-zinc-700 text-white px-4 py-3 text-sm focus:outline-none focus:border-amber-500 focus:bg-zinc-700 transition-all rounded-lg" />
                 </div>
                 <div>
                   <label className="block text-xs font-medium tracking-widest uppercase text-zinc-400 mb-2">Last Name</label>
-                  <input type="text" name="Last Name" required className="w-full bg-zinc-800 border border-zinc-700 text-white px-4 py-3 text-sm focus:outline-none focus:border-amber-500 focus:bg-zinc-700 transition-all rounded-none" />
+                  <input type="text" name="Last Name" required className="w-full bg-zinc-800 border border-zinc-700 text-white px-4 py-3 text-sm focus:outline-none focus:border-amber-500 focus:bg-zinc-700 transition-all rounded-lg" />
                 </div>
               </div>
               
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
                 <div>
                   <label className="block text-xs font-medium tracking-widest uppercase text-zinc-400 mb-2">Phone / Email</label>
-                  <input type="text" name="Contact Info" required className="w-full bg-zinc-800 border border-zinc-700 text-white px-4 py-3 text-sm focus:outline-none focus:border-amber-500 focus:bg-zinc-700 transition-all rounded-none" />
+                  <input type="text" name="Contact Info" required className="w-full bg-zinc-800 border border-zinc-700 text-white px-4 py-3 text-sm focus:outline-none focus:border-amber-500 focus:bg-zinc-700 transition-all rounded-lg" />
                 </div>
                 <div>
                   <label className="block text-xs font-medium tracking-widest uppercase text-zinc-400 mb-2">Room Type</label>
-                  <select name="Room Type" defaultValue="" required className="w-full bg-zinc-800 border border-zinc-700 text-white px-4 py-3 text-sm focus:outline-none focus:border-amber-500 focus:bg-zinc-700 transition-all appearance-none rounded-none cursor-pointer">
+                  <select name="Room Type" defaultValue="" required className="w-full bg-zinc-800 border border-zinc-700 text-white px-4 py-3 text-sm focus:outline-none focus:border-amber-500 focus:bg-zinc-700 transition-all appearance-none rounded-lg cursor-pointer">
                     <option value="" disabled>Select Room</option>
                     <option value="Deluxe City Room">Deluxe City Room</option>
                     <option value="Premium Ocean View">Premium Ocean View</option>
@@ -273,11 +273,11 @@ export default function HotelTemplate({ businessName }) {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
                 <div>
                   <label className="block text-xs font-medium tracking-widest uppercase text-zinc-400 mb-2">Check-in Date</label>
-                  <input type="date" name="Check In" required className="w-full bg-zinc-800 border border-zinc-700 text-white px-4 py-3 text-sm focus:outline-none focus:border-amber-500 focus:bg-zinc-700 text-zinc-400 transition-all rounded-none cursor-pointer" />
+                  <input type="date" name="Check In" required className="w-full bg-zinc-800 border border-zinc-700 text-white px-4 py-3 text-sm focus:outline-none focus:border-amber-500 focus:bg-zinc-700 text-zinc-400 transition-all rounded-lg cursor-pointer" />
                 </div>
                 <div>
                   <label className="block text-xs font-medium tracking-widest uppercase text-zinc-400 mb-2">Check-out Date</label>
-                  <input type="date" name="Check Out" required className="w-full bg-zinc-800 border border-zinc-700 text-white px-4 py-3 text-sm focus:outline-none focus:border-amber-500 focus:bg-zinc-700 text-zinc-400 transition-all rounded-none cursor-pointer" />
+                  <input type="date" name="Check Out" required className="w-full bg-zinc-800 border border-zinc-700 text-white px-4 py-3 text-sm focus:outline-none focus:border-amber-500 focus:bg-zinc-700 text-zinc-400 transition-all rounded-lg cursor-pointer" />
                 </div>
               </div>
 
@@ -285,7 +285,7 @@ export default function HotelTemplate({ businessName }) {
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 type="submit" 
-                className="w-full bg-amber-600 text-white font-medium py-4 uppercase tracking-widest text-sm hover:bg-amber-500 transition-all mt-4 shadow-[0_4px_14px_0_rgb(217,119,6,0.39)] rounded-none"
+                className="w-full bg-amber-600 text-white font-medium py-4 uppercase tracking-widest text-sm hover:bg-amber-500 transition-all mt-4 shadow-[0_4px_14px_0_rgb(217,119,6,0.39)] rounded-lg"
               >
                 Check Availability
               </motion.button>
@@ -293,7 +293,7 @@ export default function HotelTemplate({ businessName }) {
           </motion.div>
         </div>
       </section>
-
+      
       {/* Business Footer - Extended background to remove white gap and clear watermark */}
       <footer className="bg-zinc-950 text-zinc-400 pt-16 md:pt-20 pb-40 text-center md:text-left border-t border-zinc-900 mt-12">
         <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12 mb-8 border-b border-zinc-800 pb-10 md:pb-12">
