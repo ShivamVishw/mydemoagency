@@ -33,7 +33,7 @@ export default function Home() {
       title: "Apex Academy",
       category: "EdTech & Coaching",
       description: "Trustworthy educational platform with course breakdowns and student inquiry capture.",
-      link: "https://mydemoagency.vercel.app/demo/apex-academy",
+      link: "https://mydemoagency.vercel.app/demo/livetechindia-andheri",
       image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80",
       tag: "Live Demo"
     }
