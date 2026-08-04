@@ -23,7 +23,12 @@ export default function RealEstateTemplate({ businessName }) {
 
       {/* Navigation Bar */}
       <nav className="flex justify-between items-center p-6 max-w-7xl mx-auto bg-white/80 backdrop-blur-md sticky top-0 z-40 rounded-b-2xl shadow-sm mb-[-88px]">
-        <div className="text-2xl font-extrabold text-slate-900 tracking-tight truncate max-w-[200px] md:max-w-none">{businessName}</div>
+        <div className="flex items-center gap-4">
+          <a href="https://mydemoagency.vercel.app" className="text-xs font-bold bg-slate-100 hover:bg-slate-200 text-slate-700 px-3 py-1.5 rounded-lg transition-colors">
+            ← Agency Hub
+          </a>
+          <span className="text-2xl font-extrabold text-slate-900 tracking-tight">{businessName}</span>
+        </div>
         <div className="hidden md:flex gap-8 text-sm font-bold text-slate-700">
           <a href="#about" className="hover:text-blue-600 transition-colors">About</a>
           <a href="#properties" className="hover:text-blue-600 transition-colors">Properties</a>
@@ -268,7 +273,7 @@ export default function RealEstateTemplate({ businessName }) {
 
         </div>
       </section>
-      
+
       {/* Business Footer - Flush & Deep */}
       <footer className="bg-slate-950 text-slate-400 pt-16 pb-32 text-center md:text-left border-t border-slate-900">
         <div className="max-w-7xl mx-auto px-4 grid md:grid-cols-4 gap-8 mb-8">

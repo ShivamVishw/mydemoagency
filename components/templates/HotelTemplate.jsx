@@ -42,13 +42,20 @@ export default function HotelTemplate({ businessName }) {
       </motion.a>
 
       {/* Navigation Bar */}
+      {/* Navigation Bar */}
       <motion.nav 
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
         className="flex justify-between items-center p-4 md:p-6 max-w-7xl mx-auto bg-zinc-900/80 backdrop-blur-md sticky top-0 z-40 border-b border-zinc-800 shadow-lg mb-[-89px]"
       >
-        <div className="text-xl md:text-2xl font-serif font-light text-amber-50 tracking-wide truncate max-w-[150px] md:max-w-none">{businessName}</div>
+        <div className="flex items-center gap-4">
+          <a href="https://mydemoagency.vercel.app" className="text-xs font-medium uppercase tracking-widest bg-zinc-800 hover:bg-zinc-700 text-zinc-300 px-3 py-1.5 transition-colors">
+            ← Agency Hub
+          </a>
+          <div className="text-xl md:text-2xl font-serif font-light text-amber-50 tracking-wide truncate max-w-[150px] md:max-w-none">{businessName}</div>
+        </div>
+        
         <div className="hidden md:flex gap-8 text-sm font-medium text-zinc-300 uppercase tracking-widest">
           <a href="#about" className="hover:text-amber-500 transition-colors">Experience</a>
           <a href="#rooms" className="hover:text-amber-500 transition-colors">Rooms</a>
@@ -101,7 +108,7 @@ export default function HotelTemplate({ businessName }) {
           </div>
         </motion.div>
       </section>
-      
+
       {/* About Section */}
       <section id="about" className="py-20 md:py-32 px-4 max-w-7xl mx-auto overflow-hidden">
         <div className="flex flex-col md:flex-row items-center gap-12 md:gap-16">

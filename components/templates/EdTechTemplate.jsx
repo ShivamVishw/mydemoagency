@@ -48,7 +48,12 @@ export default function EdTechTemplate({ businessName }) {
         transition={{ duration: 0.8, ease: "easeOut" }}
         className="flex justify-between items-center p-4 md:p-6 max-w-7xl mx-auto bg-white/90 backdrop-blur-md sticky top-0 z-40 border-b border-slate-200 shadow-sm mb-[-89px]"
       >
-        <div className="text-xl md:text-2xl font-bold text-blue-700 tracking-tight truncate max-w-[150px] md:max-w-none">{businessName}</div>
+        <div className="flex items-center gap-4">
+          <a href="https://mydemoagency.vercel.app" className="text-xs font-bold bg-blue-50 hover:bg-blue-100 text-blue-700 px-3 py-1.5 rounded-lg transition-colors">
+            ← Agency Hub
+          </a>
+          <div className="text-xl md:text-2xl font-bold text-blue-700 tracking-tight truncate max-w-[150px] md:max-w-none">{businessName}</div>
+        </div>
         <div className="hidden md:flex gap-8 text-sm font-bold text-slate-600">
           <a href="#about" className="hover:text-blue-600 transition-colors">Why Us</a>
           <a href="#courses" className="hover:text-blue-600 transition-colors">Courses</a>
