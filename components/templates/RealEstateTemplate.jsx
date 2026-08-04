@@ -4,20 +4,35 @@ import { motion } from 'framer-motion';
 
 export default function RealEstateTemplate({ businessName }) {
   return (
-    <div className="bg-slate-50 font-sans text-slate-800">
+    <div className="bg-slate-50 font-sans text-slate-800 relative">
       
+      {/* Floating WhatsApp CTA */}
+      <a 
+        href="https://wa.me/917275453956?text=Hi! I am interested in your real estate services." 
+        target="_blank" 
+        rel="noopener noreferrer"
+        className="fixed bottom-28 right-6 bg-[#25D366] text-white p-4 rounded-full shadow-[0_4px_20px_rgba(37,211,102,0.4)] hover:bg-[#20bd5a] hover:scale-110 transition-all z-50 flex items-center justify-center group"
+      >
+        <span className="absolute right-16 bg-white text-slate-900 text-sm font-bold py-2 px-4 rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap">
+          Chat with us
+        </span>
+        <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564c.173.087.289.129.332.202.043.073.043.423-.101.827z"/>
+        </svg>
+      </a>
+
       {/* Navigation Bar */}
-      <nav className="flex justify-between items-center p-6 max-w-7xl mx-auto bg-white/80 backdrop-blur-md sticky top-0 z-50 rounded-b-2xl shadow-sm mb-[-88px]">
-        <div className="text-2xl font-extrabold text-slate-900 tracking-tight">{businessName}</div>
+      <nav className="flex justify-between items-center p-6 max-w-7xl mx-auto bg-white/80 backdrop-blur-md sticky top-0 z-40 rounded-b-2xl shadow-sm mb-[-88px]">
+        <div className="text-2xl font-extrabold text-slate-900 tracking-tight truncate max-w-[200px] md:max-w-none">{businessName}</div>
         <div className="hidden md:flex gap-8 text-sm font-bold text-slate-700">
           <a href="#about" className="hover:text-blue-600 transition-colors">About</a>
           <a href="#properties" className="hover:text-blue-600 transition-colors">Properties</a>
           <a href="#services" className="hover:text-blue-600 transition-colors">Services</a>
           <a href="#contact" className="hover:text-blue-600 transition-colors">Contact</a>
         </div>
-        <button className="bg-blue-600 text-white px-6 py-2.5 rounded-full text-sm font-bold hover:bg-blue-700 transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5">
+        <a href="#contact" className="bg-blue-600 text-white px-6 py-2.5 rounded-full text-sm font-bold hover:bg-blue-700 transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5 whitespace-nowrap">
           Schedule Viewing
-        </button>
+        </a>
       </nav>
 
       {/* Hero Section */}
@@ -41,12 +56,12 @@ export default function RealEstateTemplate({ businessName }) {
             Exclusive residential estates, luxury apartments, and prime commercial spaces tailored to your lifestyle.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-10 rounded-full transition-all shadow-lg hover:shadow-xl hover:-translate-y-1">
+            <a href="#properties" className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-10 rounded-full transition-all shadow-lg hover:shadow-xl hover:-translate-y-1 text-center">
               Explore Properties
-            </button>
-            <button className="bg-white hover:bg-slate-50 text-slate-900 font-semibold py-4 px-10 rounded-full transition-all shadow-lg hover:shadow-xl hover:-translate-y-1">
+            </a>
+            <a href="#contact" className="bg-white hover:bg-slate-50 text-slate-900 font-semibold py-4 px-10 rounded-full transition-all shadow-lg hover:shadow-xl hover:-translate-y-1 text-center">
               Sell Your Property
-            </button>
+            </a>
           </div>
         </motion.div>
       </section>
@@ -85,65 +100,31 @@ export default function RealEstateTemplate({ businessName }) {
             <h2 className="text-4xl font-bold mb-4 text-slate-900">Featured Listings</h2>
             <p className="text-slate-500 text-lg">Handpicked luxury properties available right now.</p>
           </div>
-          <button className="hidden md:block text-blue-600 font-semibold hover:text-blue-800 transition-colors">
-            View All Properties →
-          </button>
         </motion.div>
 
         <div className="grid md:grid-cols-3 gap-8">
-          {/* Property 1 */}
-          <motion.div whileHover={{ y: -10 }} className="bg-white rounded-2xl overflow-hidden shadow-lg border border-slate-100 group cursor-pointer">
-            <div className="h-64 overflow-hidden relative">
-              <div className="absolute top-4 left-4 bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full z-10">FOR SALE</div>
-              <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80" alt="Villa" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
-            </div>
-            <div className="p-6">
-              <h3 className="text-2xl font-bold text-slate-900 mb-2">₹12.5 Cr</h3>
-              <p className="text-lg font-semibold text-slate-700 mb-1">Sea View Modern Villa</p>
-              <p className="text-slate-500 text-sm mb-4">Worli Sea Face, Mumbai</p>
-              <div className="flex justify-between items-center text-sm text-slate-600 border-t border-slate-100 pt-4">
-                <span className="flex items-center gap-1">🛏️ 4 Beds</span>
-                <span className="flex items-center gap-1">🛁 4 Baths</span>
-                <span className="flex items-center gap-1">📐 4,500 sqft</span>
+          {[
+            { tag: "FOR SALE", color: "bg-blue-600", price: "₹12.5 Cr", name: "Sea View Modern Villa", loc: "Worli Sea Face, Mumbai", beds: "4", baths: "4", sqft: "4,500", img: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80" },
+            { tag: "NEW LAUNCH", color: "bg-emerald-500", price: "₹5.2 Cr", name: "Luxury Penthouse", loc: "Bandra West, Mumbai", beds: "3", baths: "3", sqft: "2,200", img: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=800&q=80" },
+            { tag: "COMMERCIAL", color: "bg-amber-500", price: "₹18.0 Cr", name: "Premium Office Space", loc: "BKC, Mumbai", beds: "A", baths: "12", sqft: "8,000", img: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80" }
+          ].map((prop, i) => (
+            <motion.div key={i} whileHover={{ y: -10 }} className="bg-white rounded-2xl overflow-hidden shadow-lg border border-slate-100 group cursor-pointer">
+              <div className="h-64 overflow-hidden relative">
+                <div className={`absolute top-4 left-4 ${prop.color} text-white text-xs font-bold px-3 py-1 rounded-full z-10`}>{prop.tag}</div>
+                <img src={prop.img} alt={prop.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
               </div>
-            </div>
-          </motion.div>
-
-          {/* Property 2 */}
-          <motion.div whileHover={{ y: -10 }} className="bg-white rounded-2xl overflow-hidden shadow-lg border border-slate-100 group cursor-pointer">
-            <div className="h-64 overflow-hidden relative">
-              <div className="absolute top-4 left-4 bg-emerald-500 text-white text-xs font-bold px-3 py-1 rounded-full z-10">NEW LAUNCH</div>
-              <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=800&q=80" alt="Apartment" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
-            </div>
-            <div className="p-6">
-              <h3 className="text-2xl font-bold text-slate-900 mb-2">₹5.2 Cr</h3>
-              <p className="text-lg font-semibold text-slate-700 mb-1">Luxury Penthouse</p>
-              <p className="text-slate-500 text-sm mb-4">Bandra West, Mumbai</p>
-              <div className="flex justify-between items-center text-sm text-slate-600 border-t border-slate-100 pt-4">
-                <span className="flex items-center gap-1">🛏️ 3 Beds</span>
-                <span className="flex items-center gap-1">🛁 3 Baths</span>
-                <span className="flex items-center gap-1">📐 2,200 sqft</span>
+              <div className="p-6">
+                <h3 className="text-2xl font-bold text-slate-900 mb-2">{prop.price}</h3>
+                <p className="text-lg font-semibold text-slate-700 mb-1">{prop.name}</p>
+                <p className="text-slate-500 text-sm mb-4">{prop.loc}</p>
+                <div className="flex justify-between items-center text-sm text-slate-600 border-t border-slate-100 pt-4">
+                  <span className="flex items-center gap-1">🛏️ {prop.beds} Beds</span>
+                  <span className="flex items-center gap-1">🛁 {prop.baths} Baths</span>
+                  <span className="flex items-center gap-1">📐 {prop.sqft} sqft</span>
+                </div>
               </div>
-            </div>
-          </motion.div>
-
-          {/* Property 3 */}
-          <motion.div whileHover={{ y: -10 }} className="bg-white rounded-2xl overflow-hidden shadow-lg border border-slate-100 group cursor-pointer">
-            <div className="h-64 overflow-hidden relative">
-              <div className="absolute top-4 left-4 bg-amber-500 text-white text-xs font-bold px-3 py-1 rounded-full z-10">COMMERCIAL</div>
-              <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80" alt="Office" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
-            </div>
-            <div className="p-6">
-              <h3 className="text-2xl font-bold text-slate-900 mb-2">₹18.0 Cr</h3>
-              <p className="text-lg font-semibold text-slate-700 mb-1">Premium Office Space</p>
-              <p className="text-slate-500 text-sm mb-4">BKC, Mumbai</p>
-              <div className="flex justify-between items-center text-sm text-slate-600 border-t border-slate-100 pt-4">
-                <span className="flex items-center gap-1">🏢 Grade A</span>
-                <span className="flex items-center gap-1">🚗 12 Parking</span>
-                <span className="flex items-center gap-1">📐 8,000 sqft</span>
-              </div>
-            </div>
-          </motion.div>
+            </motion.div>
+          ))}
         </div>
       </section>
 
@@ -161,11 +142,7 @@ export default function RealEstateTemplate({ businessName }) {
               { icon: "📜", title: "Legal Assistance", desc: "In-house legal experts to handle documentation, registration, and title verification securely." },
               { icon: "🛠️", title: "Property Management", desc: "From tenant screening to maintenance, we manage your investment so you don't have to." }
             ].map((service, index) => (
-              <motion.div 
-                key={index}
-                whileHover={{ y: -5 }}
-                className="p-8 rounded-2xl bg-slate-50 border border-slate-100 shadow-sm"
-              >
+              <motion.div key={index} whileHover={{ y: -5 }} className="p-8 rounded-2xl bg-slate-50 border border-slate-100 shadow-sm">
                 <div className="w-14 h-14 bg-white shadow-sm text-blue-600 rounded-xl flex items-center justify-center mb-6 text-2xl">
                   {service.icon}
                 </div>
@@ -177,34 +154,38 @@ export default function RealEstateTemplate({ businessName }) {
         </div>
       </section>
 
-      {/* Client Testimonials Section */}
-      <section className="py-24 bg-slate-900 text-white">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">What Our Clients Say</h2>
-            <p className="text-slate-400 text-lg max-w-2xl mx-auto">Don't just take our word for it. Here is what people are saying about {businessName}.</p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              { text: "They found us our dream home in under a month. The team's professionalism and knowledge of the Mumbai market is simply unmatched.", name: "Rajesh Sharma", role: "Homeowner" },
-              { text: "Sold my commercial property at 15% above asking price. Their negotiation skills and network of verified buyers made all the difference.", name: "Anita Desai", role: "Investor" },
-              { text: "Managing my rental properties used to be a nightmare. Since handing it over to them, I haven't had to worry about a single thing.", name: "Vikram Mehta", role: "NRI Investor" }
-            ].map((review, index) => (
-              <div key={index} className="bg-slate-800 p-8 rounded-2xl border border-slate-700">
-                <div className="text-yellow-400 mb-4 text-xl">★★★★★</div>
-                <p className="text-slate-300 italic mb-6 leading-relaxed">"{review.text}"</p>
-                <div>
-                  <h4 className="font-bold text-white">{review.name}</h4>
-                  <p className="text-sm text-slate-400">{review.role}</p>
-                </div>
-              </div>
-            ))}
-          </div>
+      {/* About Us Section */}
+      <section id="about" className="py-24 bg-slate-50">
+        <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center gap-16">
+          <motion.div 
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            className="md:w-1/2"
+          >
+            <div className="rounded-2xl overflow-hidden shadow-2xl">
+              <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=800&q=80" alt="Modern interior" className="w-full h-auto" />
+            </div>
+          </motion.div>
+          
+          <motion.div 
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            className="md:w-1/2"
+          >
+            <h2 className="text-4xl font-bold mb-6 text-slate-900">About {businessName}</h2>
+            <p className="text-lg text-slate-600 mb-6 leading-relaxed">
+              For over a decade, we have been the trusted name in Mumbai's real estate market. We don't just sell properties; we match people with spaces where they can thrive, build wealth, and create lasting memories.
+            </p>
+            <blockquote className="border-l-4 border-blue-600 pl-4 italic text-slate-500 font-medium">
+              "Our mission is to make real estate transactions seamless, secure, and highly rewarding for our clients."
+            </blockquote>
+          </motion.div>
         </div>
       </section>
 
-      {/* Contact Section */}
+      {/* Contact Section WITH WORKING FORM */}
       <section id="contact" className="py-24 px-4 max-w-7xl mx-auto">
         <div className="bg-white rounded-3xl overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.12)] border border-slate-100 flex flex-col md:flex-row">
           
@@ -234,31 +215,38 @@ export default function RealEstateTemplate({ businessName }) {
           </div>
 
           <div className="md:w-1/2 p-12 bg-white">
-            <form className="space-y-6">
+            {/* FormSubmit.co Integration - Sends directly to your email */}
+            <form action="https://formsubmit.co/shivamvishwakarma1432@gmail.com" method="POST" className="space-y-6">
+              
+              {/* Hidden Inputs for FormSubmit Configuration */}
+              <input type="hidden" name="_subject" value={`New Lead from ${businessName} Demo Site!`} />
+              <input type="hidden" name="_captcha" value="false" />
+              <input type="hidden" name="_template" value="table" />
+
               <div className="grid grid-cols-2 gap-6">
                 <div>
                   <label className="block text-sm font-bold text-slate-700 mb-2">First Name</label>
-                  <input type="text" className="w-full border border-slate-200 rounded-lg px-4 py-3 focus:outline-none focus:border-blue-600 focus:ring-1 focus:ring-blue-600 bg-slate-50" placeholder="John" />
+                  <input type="text" name="First Name" required className="w-full border border-slate-200 rounded-lg px-4 py-3 focus:outline-none focus:border-blue-600 focus:ring-1 focus:ring-blue-600 bg-slate-50" placeholder="John" />
                 </div>
                 <div>
                   <label className="block text-sm font-bold text-slate-700 mb-2">Last Name</label>
-                  <input type="text" className="w-full border border-slate-200 rounded-lg px-4 py-3 focus:outline-none focus:border-blue-600 focus:ring-1 focus:ring-blue-600 bg-slate-50" placeholder="Doe" />
+                  <input type="text" name="Last Name" required className="w-full border border-slate-200 rounded-lg px-4 py-3 focus:outline-none focus:border-blue-600 focus:ring-1 focus:ring-blue-600 bg-slate-50" placeholder="Doe" />
                 </div>
               </div>
               <div>
                 <label className="block text-sm font-bold text-slate-700 mb-2">Phone Number</label>
-                <input type="tel" className="w-full border border-slate-200 rounded-lg px-4 py-3 focus:outline-none focus:border-blue-600 focus:ring-1 focus:ring-blue-600 bg-slate-50" placeholder="+91 00000 00000" />
+                <input type="tel" name="Phone" required className="w-full border border-slate-200 rounded-lg px-4 py-3 focus:outline-none focus:border-blue-600 focus:ring-1 focus:ring-blue-600 bg-slate-50" placeholder="+91 00000 00000" />
               </div>
               <div>
                 <label className="block text-sm font-bold text-slate-700 mb-2">I am looking to...</label>
-                <select className="w-full border border-slate-200 rounded-lg px-4 py-3 focus:outline-none focus:border-blue-600 focus:ring-1 focus:ring-blue-600 bg-slate-50">
-                  <option>Buy a property</option>
-                  <option>Sell a property</option>
-                  <option>Rent a property</option>
-                  <option>Consulting</option>
+                <select name="Service Requested" className="w-full border border-slate-200 rounded-lg px-4 py-3 focus:outline-none focus:border-blue-600 focus:ring-1 focus:ring-blue-600 bg-slate-50">
+                  <option value="Buy a property">Buy a property</option>
+                  <option value="Sell a property">Sell a property</option>
+                  <option value="Rent a property">Rent a property</option>
+                  <option value="Consulting">Consulting</option>
                 </select>
               </div>
-              <button type="button" className="w-full bg-slate-900 text-white font-bold py-4 rounded-lg hover:bg-slate-800 transition-colors shadow-lg mt-4">
+              <button type="submit" className="w-full bg-slate-900 text-white font-bold py-4 rounded-lg hover:bg-slate-800 transition-colors shadow-lg mt-4">
                 Request Callback
               </button>
             </form>
@@ -267,7 +255,7 @@ export default function RealEstateTemplate({ businessName }) {
         </div>
       </section>
 
-      {/* Business Footer (Standalone from your Watermark) */}
+      {/* Business Footer */}
       <footer className="bg-slate-950 text-slate-400 py-16 text-center md:text-left">
         <div className="max-w-7xl mx-auto px-4 grid md:grid-cols-4 gap-8 mb-8">
           <div className="col-span-2">
@@ -281,14 +269,6 @@ export default function RealEstateTemplate({ businessName }) {
               <li><a href="#about" className="hover:text-blue-500 transition-colors">About Us</a></li>
               <li><a href="#properties" className="hover:text-blue-500 transition-colors">Properties</a></li>
               <li><a href="#contact" className="hover:text-blue-500 transition-colors">Contact</a></li>
-            </ul>
-          </div>
-          <div>
-            <h4 className="text-white font-bold mb-4 uppercase text-sm tracking-wider">Legal</h4>
-            <ul className="space-y-2 text-sm">
-              <li><a href="#" className="hover:text-blue-500 transition-colors">Privacy Policy</a></li>
-              <li><a href="#" className="hover:text-blue-500 transition-colors">Terms of Service</a></li>
-              <li><a href="#" className="hover:text-blue-500 transition-colors">RERA Disclaimers</a></li>
             </ul>
           </div>
         </div>
