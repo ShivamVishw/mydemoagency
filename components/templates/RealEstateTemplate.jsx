@@ -274,24 +274,30 @@ export default function RealEstateTemplate({ businessName }) {
         </div>
       </section>
 
-      {/* Business Footer - Flush & Deep */}
-      <footer className="bg-slate-950 text-slate-400 pt-16 pb-32 text-center md:text-left border-t border-slate-900">
-        <div className="max-w-7xl mx-auto px-4 grid md:grid-cols-4 gap-8 mb-8">
-          <div className="col-span-2">
-            <h3 className="text-2xl font-bold text-white mb-4">{businessName}</h3>
-            <p className="text-slate-500 max-w-sm">Elevating the standards of real estate in Mumbai through transparency, trust, and premium service.</p>
+      {/* Business Footer - 3-Column Layout */}
+      <footer className="bg-slate-950 text-slate-400 pt-16 md:pt-20 pb-40 text-center md:text-left border-t border-slate-900 mt-12">
+        <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12 mb-8 border-b border-slate-800 pb-10 md:pb-12">
+          <div>
+            <h3 className="text-xl md:text-2xl font-bold text-white mb-4">{businessName}</h3>
+            <p className="text-sm leading-relaxed max-w-xs mx-auto md:mx-0">Elevating the standards of real estate in Mumbai through transparency, trust, and premium service.</p>
           </div>
           <div>
-            <h4 className="text-white font-bold mb-4 uppercase text-sm tracking-wider">Quick Links</h4>
-            <ul className="space-y-2 text-sm">
-              <li><a href="#" className="hover:text-blue-500 transition-colors">Home</a></li>
-              <li><a href="#about" className="hover:text-blue-500 transition-colors">About Us</a></li>
-              <li><a href="#properties" className="hover:text-blue-500 transition-colors">Properties</a></li>
-              <li><a href="#contact" className="hover:text-blue-500 transition-colors">Contact</a></li>
-            </ul>
+            <h4 className="text-blue-500 font-bold mb-4 uppercase tracking-widest text-xs md:text-sm">Visit Us</h4>
+            <p className="text-sm mb-2 hover:text-slate-200 transition-colors cursor-pointer">Bandra Kurla Complex</p>
+            <p className="text-sm mb-2 hover:text-slate-200 transition-colors cursor-pointer">Mumbai, Maharashtra 400051</p>
+            <p className="text-sm mt-4 text-white">Mon-Sat: 9:30 AM - 7 PM</p>
+          </div>
+          <div>
+            <h4 className="text-blue-500 font-bold mb-4 uppercase tracking-widest text-xs md:text-sm">Contact</h4>
+            <p className="text-sm mb-2 hover:text-slate-200 transition-colors cursor-pointer">+91 98765 43210</p>
+            <p className="text-sm mb-4 hover:text-slate-200 transition-colors cursor-pointer">contact@{businessName.toLowerCase().replace(/[^a-z0-9]/g, '')}.com</p>
+            <div className="flex gap-4 justify-center md:justify-start">
+              <span className="w-8 h-8 bg-slate-800 flex items-center justify-center rounded-full hover:bg-blue-600 hover:text-white cursor-pointer transition-all hover:scale-110 text-xs">IN</span>
+              <span className="w-8 h-8 bg-slate-800 flex items-center justify-center rounded-full hover:bg-blue-600 hover:text-white cursor-pointer transition-all hover:scale-110 text-xs">FB</span>
+            </div>
           </div>
         </div>
-        <div className="max-w-7xl mx-auto px-4 border-t border-slate-800 pt-8 text-sm text-slate-600 text-center">
+        <div className="max-w-7xl mx-auto px-4 text-[10px] md:text-xs tracking-widest uppercase text-slate-600 text-center">
           © 2026 {businessName}. All rights reserved.
         </div>
       </footer>
