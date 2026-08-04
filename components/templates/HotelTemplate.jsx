@@ -61,14 +61,23 @@ export default function HotelTemplate({ businessName }) {
 
       {/* Hero Section */}
       <section className="relative h-[90vh] md:h-screen flex items-center justify-center text-center px-4 overflow-hidden pt-22">
-        <div className="absolute inset-0 bg-zinc-900/40 z-10"></div>
+        
+        {/* Bulletproof Image Wrapper */}
         <motion.div 
           initial={{ scale: 1.1 }}
           animate={{ scale: 1 }}
           transition={{ duration: 1.5, ease: "easeOut" }}
-          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1542314831-c6a421192af4?auto=format&fit=crop&w=1920&q=80')" }}
-          className="absolute inset-0 bg-cover bg-center"
-        ></motion.div>
+          className="absolute inset-0 z-0"
+        >
+          <img 
+            src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1920&q=80" 
+            alt="Luxury Hotel" 
+            className="w-full h-full object-cover"
+          />
+        </motion.div>
+        
+        {/* Dark Overlay for Text Readability */}
+        <div className="absolute inset-0 bg-zinc-900/50 z-10"></div>
 
         <motion.div 
           initial={{ opacity: 0, y: 40 }}
@@ -92,7 +101,7 @@ export default function HotelTemplate({ businessName }) {
           </div>
         </motion.div>
       </section>
-
+      
       {/* About Section */}
       <section id="about" className="py-20 md:py-32 px-4 max-w-7xl mx-auto overflow-hidden">
         <div className="flex flex-col md:flex-row items-center gap-12 md:gap-16">
@@ -293,7 +302,7 @@ export default function HotelTemplate({ businessName }) {
           </motion.div>
         </div>
       </section>
-      
+
       {/* Business Footer - Extended background to remove white gap and clear watermark */}
       <footer className="bg-zinc-950 text-zinc-400 pt-16 md:pt-20 pb-40 text-center md:text-left border-t border-zinc-900 mt-12">
         <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12 mb-8 border-b border-zinc-800 pb-10 md:pb-12">
