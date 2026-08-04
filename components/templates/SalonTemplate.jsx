@@ -4,7 +4,6 @@ import { motion } from 'framer-motion';
 
 export default function SalonTemplate({ businessName }) {
   
-  // Animation Variants for staggered effects
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -19,9 +18,9 @@ export default function SalonTemplate({ businessName }) {
   };
 
   return (
-    <div className="bg-stone-50 font-sans text-stone-900 relative selection:bg-amber-600/30 pb-12">
+    <div className="bg-stone-50 font-sans text-stone-900 relative selection:bg-amber-600/30">
       
-      {/* Floating WhatsApp CTA - FIXED POSITIONING */}
+      {/* Floating WhatsApp CTA */}
       <motion.a 
         initial={{ scale: 0, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
@@ -31,7 +30,8 @@ export default function SalonTemplate({ businessName }) {
         href="https://wa.me/917275453956?text=Hi! I would like to book an appointment." 
         target="_blank" 
         rel="noopener noreferrer"
-        className="fixed bottom-32 right-6 md:bottom-32 md:right-10 bg-[#25D366] text-white p-4 rounded-full shadow-[0_4px_20px_rgba(37,211,102,0.4)] z-[60] flex items-center justify-center group"
+        style={{ bottom: '130px', zIndex: 9999 }}
+        className="fixed right-6 md:right-10 bg-[#25D366] text-white p-4 rounded-full shadow-[0_4px_20px_rgba(37,211,102,0.4)] flex items-center justify-center group"
       >
         <span className="absolute right-16 bg-white text-stone-900 text-sm font-bold py-2 px-4 rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap">
           Book via WhatsApp
@@ -66,7 +66,8 @@ export default function SalonTemplate({ businessName }) {
           initial={{ scale: 1.1 }}
           animate={{ scale: 1 }}
           transition={{ duration: 1.5, ease: "easeOut" }}
-          className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1920&q=80')] bg-cover bg-center"
+          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1920&q=80')" }}
+          className="absolute inset-0 bg-cover bg-center"
         ></motion.div>
 
         <motion.div 
@@ -82,10 +83,10 @@ export default function SalonTemplate({ businessName }) {
             Elevate Your Beauty at {businessName}
           </h1>
           <div className="flex flex-col sm:flex-row justify-center gap-4 px-4">
-            <a href="#book" className="bg-amber-600 hover:bg-amber-500 text-white font-medium py-3 md:py-4 px-8 md:px-10 tracking-widest uppercase transition-colors shadow-xl active:scale-95">
+            <a href="#book" className="bg-amber-600 hover:bg-amber-500 text-white font-medium py-3 md:py-4 px-8 md:px-10 tracking-widest uppercase transition-colors shadow-xl active:scale-95 hover:scale-105">
               Book Appointment
             </a>
-            <a href="#services" className="bg-white/10 backdrop-blur-sm border border-white/50 hover:bg-white hover:text-stone-900 text-white font-medium py-3 md:py-4 px-8 md:px-10 tracking-widest uppercase transition-colors shadow-xl active:scale-95">
+            <a href="#services" className="bg-white/10 backdrop-blur-sm border border-white/50 hover:bg-white hover:text-stone-900 text-white font-medium py-3 md:py-4 px-8 md:px-10 tracking-widest uppercase transition-colors shadow-xl active:scale-95 hover:scale-105">
               View Menu
             </a>
           </div>
@@ -107,12 +108,12 @@ export default function SalonTemplate({ businessName }) {
             <p className="text-sm">We only use top-tier, cruelty-free brands.</p>
           </motion.div>
           <motion.div variants={itemVariants} className="px-4 md:border-x md:border-stone-700">
-            <span className="text-3xl mb-2 block hover:rotate-12 transition-transform">🏆</span>
+            <span className="text-3xl mb-2 block hover:rotate-12 transition-transform cursor-pointer">🏆</span>
             <h3 className="font-serif text-lg text-amber-50 mb-1">Master Stylists</h3>
             <p className="text-sm">Highly trained experts in modern aesthetics.</p>
           </motion.div>
           <motion.div variants={itemVariants} className="px-4">
-            <span className="text-3xl mb-2 block hover:-rotate-12 transition-transform">🌿</span>
+            <span className="text-3xl mb-2 block hover:-rotate-12 transition-transform cursor-pointer">🌿</span>
             <h3 className="font-serif text-lg text-amber-50 mb-1">Serene Atmosphere</h3>
             <p className="text-sm">A relaxing oasis in the heart of the city.</p>
           </motion.div>
@@ -130,11 +131,11 @@ export default function SalonTemplate({ businessName }) {
             className="md:w-1/2 w-full"
           >
             <div className="relative group">
-              <div className="absolute inset-0 bg-amber-600/20 translate-x-4 translate-y-4 transition-transform group-hover:translate-x-6 group-hover:translate-y-6"></div>
-              <img src="https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?auto=format&fit=crop&w=800&q=80" alt="Spa interior" className="w-full h-auto shadow-2xl relative z-10" />
+              <div className="absolute inset-0 bg-amber-600/20 translate-x-4 translate-y-4 transition-transform group-hover:translate-x-6 group-hover:translate-y-6 rounded-lg"></div>
+              <img src="https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?auto=format&fit=crop&w=800&q=80" alt="Spa interior" className="w-full h-auto shadow-2xl relative z-10 rounded-lg" />
               <motion.div 
                 whileHover={{ scale: 1.05 }}
-                className="absolute -bottom-6 -right-6 md:-bottom-8 md:-right-8 bg-amber-600 text-white p-6 md:p-8 shadow-xl hidden md:block z-20"
+                className="absolute -bottom-6 -right-6 md:-bottom-8 md:-right-8 bg-amber-600 text-white p-6 md:p-8 shadow-xl hidden md:block z-20 rounded-lg cursor-pointer"
               >
                 <p className="text-3xl md:text-4xl font-serif">10+</p>
                 <p className="uppercase tracking-widest text-xs md:text-sm">Years of<br/>Excellence</p>
@@ -184,7 +185,7 @@ export default function SalonTemplate({ businessName }) {
                   { name: "Balayage & Color Melting", price: "₹4,500+", desc: "Customized color application for a seamless, natural blend." },
                   { name: "Keratin Smoothing", price: "₹5,000+", desc: "Frizz-free, glossy hair lasting up to 3 months." }
                 ].map((item, i) => (
-                  <motion.div variants={itemVariants} key={i} className="border-b border-stone-100 pb-4 group cursor-pointer">
+                  <motion.div variants={itemVariants} key={i} className="border-b border-stone-100 pb-4 group cursor-pointer hover:bg-stone-50 p-2 rounded-lg transition-colors">
                     <div className="flex justify-between items-baseline mb-1 group-hover:text-amber-600 transition-colors">
                       <h4 className="font-medium">{item.name}</h4>
                       <span className="font-serif text-amber-700">{item.price}</span>
@@ -205,7 +206,7 @@ export default function SalonTemplate({ businessName }) {
                   { name: "Aromatherapy Massage", price: "₹3,000", desc: "Full body relaxation using essential oils to relieve tension." },
                   { name: "Luxury Bridal Package", price: "₹15,000+", desc: "Complete head-to-toe prep for your special day." }
                 ].map((item, i) => (
-                  <motion.div variants={itemVariants} key={i} className="border-b border-stone-100 pb-4 group cursor-pointer">
+                  <motion.div variants={itemVariants} key={i} className="border-b border-stone-100 pb-4 group cursor-pointer hover:bg-stone-50 p-2 rounded-lg transition-colors">
                     <div className="flex justify-between items-baseline mb-1 group-hover:text-amber-600 transition-colors">
                       <h4 className="font-medium">{item.name}</h4>
                       <span className="font-serif text-amber-700">{item.price}</span>
@@ -223,7 +224,7 @@ export default function SalonTemplate({ businessName }) {
             viewport={{ once: true }}
             className="mt-16 text-center"
           >
-            <a href="#book" className="inline-block border border-stone-900 text-stone-900 hover:bg-stone-900 hover:text-white px-8 py-3 uppercase tracking-widest text-sm transition-colors active:scale-95">
+            <a href="#book" className="inline-block border border-stone-900 text-stone-900 hover:bg-stone-900 hover:text-white px-8 py-3 uppercase tracking-widest text-sm transition-all active:scale-95 hover:shadow-lg">
               Book a Service
             </a>
           </motion.div>
@@ -254,7 +255,7 @@ export default function SalonTemplate({ businessName }) {
             { text: "The aromatherapy massage was exactly what I needed after a long work week. The ambiance is so peaceful and luxurious.", name: "Neha M." },
             { text: "Got my bridal makeup and hair done here. They made me feel like an absolute queen on my wedding day. Highly recommended!", name: "Ananya R." }
           ].map((review, index) => (
-            <motion.div variants={itemVariants} whileHover={{ y: -10, boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)" }} key={index} className="bg-white p-8 md:p-10 shadow-sm border border-stone-100 text-center transition-shadow">
+            <motion.div variants={itemVariants} whileHover={{ y: -10, boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)" }} key={index} className="bg-white p-8 md:p-10 shadow-sm border border-stone-100 text-center transition-all rounded-xl cursor-default">
               <div className="text-amber-500 mb-6 text-lg md:text-xl tracking-widest">★★★★★</div>
               <p className="text-stone-600 italic mb-8 leading-relaxed text-sm md:text-base">"{review.text}"</p>
               <h4 className="font-serif text-stone-900 text-lg">{review.name}</h4>
@@ -263,15 +264,24 @@ export default function SalonTemplate({ businessName }) {
         </motion.div>
       </section>
 
-      {/* Booking Form Section WITH FORMSUBMIT AND REACT FIX */}
-      <section id="book" className="py-0">
-        <div className="flex flex-col md:flex-row shadow-2xl">
+      {/* Booking Form Section - SEPARATED & HOVER ANIMATED */}
+      <section id="book" className="py-12 md:py-24 px-4 max-w-7xl mx-auto">
+        <div className="flex flex-col md:flex-row gap-8 md:gap-12">
           
-          {/* Image Side - FIXED IMAGE URL */}
-          <div className="w-full md:w-1/2 min-h-[300px] md:min-h-[500px] bg-[url('https://images.unsplash.com/photo-1521590832167-7bfcfaa6362f?auto=format&fit=crop&w=1000&q=80')] bg-cover bg-center"></div>
+          {/* Image Side - Separated Card with Hover */}
+          <motion.div 
+            whileHover={{ scale: 1.02 }}
+            transition={{ duration: 0.4 }}
+            className="w-full md:w-1/2 min-h-[350px] md:min-h-[500px] bg-cover bg-center rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] cursor-pointer"
+            style={{ backgroundImage: "url('https://images.unsplash.com/photo-1522337660859-02fbefca4702?auto=format&fit=crop&w=1000&q=80')" }}
+          ></motion.div>
 
-          {/* Form Side */}
-          <div className="w-full md:w-1/2 bg-stone-900 p-8 md:p-16 lg:p-20 text-stone-100 flex flex-col justify-center">
+          {/* Form Side - Separated Card */}
+          <motion.div 
+            whileHover={{ y: -5 }}
+            transition={{ duration: 0.4 }}
+            className="w-full md:w-1/2 bg-stone-900 p-8 md:p-12 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] text-stone-100 flex flex-col justify-center border border-stone-800"
+          >
             <p className="text-amber-500 font-medium tracking-[0.2em] uppercase mb-2 md:mb-4 text-xs md:text-sm">Reserve Your Time</p>
             <h2 className="text-3xl md:text-4xl font-serif mb-6 md:mb-8">Book an Appointment</h2>
             
@@ -282,18 +292,18 @@ export default function SalonTemplate({ businessName }) {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
                 <div>
-                  <input type="text" name="First Name" required className="w-full bg-stone-800 border border-stone-700 text-white px-4 py-3 text-sm md:text-base focus:outline-none focus:border-amber-500 placeholder-stone-500 transition-colors" placeholder="First Name" />
+                  <input type="text" name="First Name" required className="w-full bg-stone-800 border border-stone-700 text-white px-4 py-3 text-sm md:text-base focus:outline-none focus:border-amber-500 focus:bg-stone-700 placeholder-stone-500 transition-all rounded-md" placeholder="First Name" />
                 </div>
                 <div>
-                  <input type="text" name="Last Name" required className="w-full bg-stone-800 border border-stone-700 text-white px-4 py-3 text-sm md:text-base focus:outline-none focus:border-amber-500 placeholder-stone-500 transition-colors" placeholder="Last Name" />
+                  <input type="text" name="Last Name" required className="w-full bg-stone-800 border border-stone-700 text-white px-4 py-3 text-sm md:text-base focus:outline-none focus:border-amber-500 focus:bg-stone-700 placeholder-stone-500 transition-all rounded-md" placeholder="Last Name" />
                 </div>
               </div>
               <div>
-                <input type="tel" name="Phone" required className="w-full bg-stone-800 border border-stone-700 text-white px-4 py-3 text-sm md:text-base focus:outline-none focus:border-amber-500 placeholder-stone-500 transition-colors" placeholder="Phone Number" />
+                <input type="tel" name="Phone" required className="w-full bg-stone-800 border border-stone-700 text-white px-4 py-3 text-sm md:text-base focus:outline-none focus:border-amber-500 focus:bg-stone-700 placeholder-stone-500 transition-all rounded-md" placeholder="Phone Number" />
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
                 <div>
-                  <select name="Service" defaultValue="" required className="w-full bg-stone-800 border border-stone-700 text-white px-4 py-3 text-sm md:text-base focus:outline-none focus:border-amber-500 transition-colors appearance-none">
+                  <select name="Service" defaultValue="" required className="w-full bg-stone-800 border border-stone-700 text-white px-4 py-3 text-sm md:text-base focus:outline-none focus:border-amber-500 focus:bg-stone-700 transition-all appearance-none rounded-md cursor-pointer">
                     <option value="" disabled>Select Service</option>
                     <option value="Haircut & Styling">Haircut & Styling</option>
                     <option value="Hair Coloring">Hair Coloring</option>
@@ -303,24 +313,24 @@ export default function SalonTemplate({ businessName }) {
                   </select>
                 </div>
                 <div>
-                  <input type="date" name="Preferred Date" required className="w-full bg-stone-800 border border-stone-700 text-white px-4 py-3 text-sm md:text-base focus:outline-none focus:border-amber-500 text-stone-400 transition-colors" />
+                  <input type="date" name="Preferred Date" required className="w-full bg-stone-800 border border-stone-700 text-white px-4 py-3 text-sm md:text-base focus:outline-none focus:border-amber-500 focus:bg-stone-700 text-stone-400 transition-all rounded-md cursor-pointer" />
                 </div>
               </div>
               <motion.button 
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 type="submit" 
-                className="w-full bg-amber-600 text-white font-medium py-4 uppercase tracking-widest text-sm hover:bg-amber-500 transition-colors mt-2 shadow-lg"
+                className="w-full bg-amber-600 text-white font-medium py-4 uppercase tracking-widest text-sm hover:bg-amber-500 transition-all mt-4 shadow-[0_4px_14px_0_rgb(217,119,6,0.39)] rounded-md"
               >
                 Confirm Request
               </motion.button>
             </form>
-          </div>
+          </motion.div>
         </div>
       </section>
 
-      {/* Business Footer */}
-      <footer className="bg-stone-950 text-stone-400 py-12 md:py-16 text-center md:text-left">
+      {/* Business Footer - Extended background to remove white gap */}
+      <footer className="bg-stone-950 text-stone-400 pt-12 md:pt-16 pb-32 md:pb-40 text-center md:text-left mt-12 rounded-t-3xl shadow-[0_-10px_40px_rgba(0,0,0,0.1)]">
         <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12 mb-8 border-b border-stone-800 pb-10 md:pb-12">
           <div>
             <h3 className="text-xl md:text-2xl font-serif text-amber-50 mb-4">{businessName}</h3>
@@ -328,17 +338,17 @@ export default function SalonTemplate({ businessName }) {
           </div>
           <div>
             <h4 className="text-amber-500 font-medium mb-4 uppercase tracking-widest text-xs md:text-sm">Visit Us</h4>
-            <p className="text-sm mb-2">123 Wellness Boulevard</p>
-            <p className="text-sm mb-2">Mumbai, Maharashtra 400001</p>
+            <p className="text-sm mb-2 hover:text-amber-100 transition-colors cursor-pointer">123 Wellness Boulevard</p>
+            <p className="text-sm mb-2 hover:text-amber-100 transition-colors cursor-pointer">Mumbai, Maharashtra 400001</p>
             <p className="text-sm mt-4 text-amber-50">Mon-Sat: 10AM - 8PM</p>
           </div>
           <div>
             <h4 className="text-amber-500 font-medium mb-4 uppercase tracking-widest text-xs md:text-sm">Contact</h4>
-            <p className="text-sm mb-2">+91 98765 43210</p>
-            <p className="text-sm mb-4">hello@{businessName.toLowerCase().replace(/\s+/g, '')}.com</p>
+            <p className="text-sm mb-2 hover:text-amber-100 transition-colors cursor-pointer">+91 98765 43210</p>
+            <p className="text-sm mb-4 hover:text-amber-100 transition-colors cursor-pointer">hello@{businessName.toLowerCase().replace(/\s+/g, '')}.com</p>
             <div className="flex gap-4 justify-center md:justify-start">
-              <span className="w-8 h-8 bg-stone-800 flex items-center justify-center rounded-full hover:bg-amber-600 hover:text-white cursor-pointer transition-colors text-xs">IG</span>
-              <span className="w-8 h-8 bg-stone-800 flex items-center justify-center rounded-full hover:bg-amber-600 hover:text-white cursor-pointer transition-colors text-xs">FB</span>
+              <span className="w-8 h-8 bg-stone-800 flex items-center justify-center rounded-full hover:bg-amber-600 hover:text-white cursor-pointer transition-all hover:scale-110 text-xs">IG</span>
+              <span className="w-8 h-8 bg-stone-800 flex items-center justify-center rounded-full hover:bg-amber-600 hover:text-white cursor-pointer transition-all hover:scale-110 text-xs">FB</span>
             </div>
           </div>
         </div>
