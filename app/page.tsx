@@ -26,7 +26,7 @@ export default function Home() {
       category: "Hospitality & Hotels",
       description: "Cinematic hotel website with room showcases and direct reservation request forms.",
       link: "https://mydemoagency.vercel.app/demo/the-best-hotel-mumbai",
-      image: "https://images.unsplash.com/photo-1542314831-c6a421192af4?auto=format&fit=crop&w=800&q=80",
+      image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=800&q=80",
       tag: "Live Demo"
     },
     {
