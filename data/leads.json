@@ -1,0 +1,202 @@
+[
+    {
+      "slug": "a-and-z-realtors-mindspace-malad-west",
+      "name": "A and Z Realtors - Mindspace, Malad West",
+      "category": "Real Estate"
+    },
+    {
+      "slug": "walk-2-dreams-home-llp",
+      "name": "Walk 2 Dreams Home LLP",
+      "category": "Real Estate"
+    },
+    {
+      "slug": "nivom-realty",
+      "name": "Nivom Realty",
+      "category": "Real Estate"
+    },
+    {
+      "slug": "real-estate-consultant-abbas-ali-arif",
+      "name": "Real Estate Consultant - Abbas Ali Arif",
+      "category": "Real Estate"
+    },
+    {
+      "slug": "true-space-advisory-rachit-vora",
+      "name": "True Space Advisory (Rachit Vora)",
+      "category": "Real Estate"
+    },
+    {
+      "slug": "fortune-real-estate-agency",
+      "name": "Fortune Real Estate Agency",
+      "category": "Real Estate"
+    },
+    {
+      "slug": "property-lucky-associates",
+      "name": "Property Lucky Associates",
+      "category": "Real Estate"
+    },
+    {
+      "slug": "south-mumbai-property-hub",
+      "name": "South Mumbai Property Hub",
+      "category": "Real Estate"
+    },
+    {
+      "slug": "flying-horse-international",
+      "name": "Flying Horse International",
+      "category": "Real Estate"
+    },
+    {
+      "slug": "mumbaiproperties-consulting-pvt-ltd",
+      "name": "MumbaiProperties Consulting Pvt Ltd",
+      "category": "Real Estate"
+    },
+    {
+      "slug": "muktaa-wellness-marine-drive",
+      "name": "Muktaa Wellness (Marine Drive)",
+      "category": "Salon/Spa"
+    },
+    {
+      "slug": "florian-hurel-hair-couture-and-spa",
+      "name": "Florian Hurel Hair Couture and Spa",
+      "category": "Salon/Spa"
+    },
+    {
+      "slug": "tattva-wellness-spa-novotel-andheri-east",
+      "name": "Tattva Wellness Spa (Novotel, Andheri East)",
+      "category": "Salon/Spa"
+    },
+    {
+      "slug": "richy-salon-and-spa",
+      "name": "Richy Salon and Spa",
+      "category": "Salon/Spa"
+    },
+    {
+      "slug": "namastey-wellness-spa",
+      "name": "Namastey Wellness Spa",
+      "category": "Salon/Spa"
+    },
+    {
+      "slug": "myrah-juhu",
+      "name": "MYRAH - Juhu",
+      "category": "Salon/Spa"
+    },
+    {
+      "slug": "lubss-spa-luxuries-juhu",
+      "name": "Lubss Spa Luxuries Juhu",
+      "category": "Salon/Spa"
+    },
+    {
+      "slug": "la-bella-spa-marine-lines",
+      "name": "La Bella Spa (Marine Lines)",
+      "category": "Salon/Spa"
+    },
+    {
+      "slug": "alines-beauty-care-luxury-spa",
+      "name": "Aline's Beauty & Care Luxury Spa",
+      "category": "Salon/Spa"
+    },
+    {
+      "slug": "tattva-wellness-spa-holiday-inn-saki-naka",
+      "name": "Tattva Wellness Spa (Holiday Inn, Saki Naka)",
+      "category": "Salon/Spa"
+    },
+    {
+      "slug": "the-best-hotel-mumbai",
+      "name": "The Best Hotel Mumbai",
+      "category": "Hotel"
+    },
+    {
+      "slug": "hotel-royal-palace-fort",
+      "name": "Hotel Royal Palace Fort",
+      "category": "Hotel"
+    },
+    {
+      "slug": "nest-stay-hostelpgdormitory",
+      "name": "Nest Stay - Hostel/PG/Dormitory",
+      "category": "Hotel"
+    },
+    {
+      "slug": "wind-flower-regency",
+      "name": "Wind Flower Regency",
+      "category": "Hotel"
+    },
+    {
+      "slug": "hotel-kailash-park",
+      "name": "Hotel Kailash Park",
+      "category": "Hotel"
+    },
+    {
+      "slug": "suncity-apollo-hotel",
+      "name": "Suncity Apollo Hotel",
+      "category": "Hotel"
+    },
+    {
+      "slug": "hotel-guest-inn-residency",
+      "name": "Hotel Guest Inn Residency",
+      "category": "Hotel"
+    },
+    {
+      "slug": "srikrishna-paradise-hotel",
+      "name": "Srikrishna Paradise Hotel",
+      "category": "Hotel"
+    },
+    {
+      "slug": "shahana-guest-house",
+      "name": "Shahana Guest House",
+      "category": "Hotel"
+    },
+    {
+      "slug": "bkc-corporate-hostel-stays",
+      "name": "BKC Corporate Hostel & Stays",
+      "category": "Hotel"
+    },
+    {
+      "slug": "e-tech-academy",
+      "name": "E-Tech Academy",
+      "category": "EdTech/Coaching"
+    },
+    {
+      "slug": "ld-edutech-thane",
+      "name": "L&D Edutech (Thane)",
+      "category": "EdTech/Coaching"
+    },
+    {
+      "slug": "ufaber-edutech-pvt-ltd",
+      "name": "uFaber Edutech Pvt Ltd",
+      "category": "EdTech/Coaching"
+    },
+    {
+      "slug": "livetechindia-andheri",
+      "name": "Livetechindia Andheri",
+      "category": "EdTech/Coaching"
+    },
+    {
+      "slug": "infomatica-academy",
+      "name": "Infomatica Academy",
+      "category": "EdTech/Coaching"
+    },
+    {
+      "slug": "traininginbox-edtech-pvt-ltd",
+      "name": "TrainingInbox Edtech Pvt Ltd",
+      "category": "EdTech/Coaching"
+    },
+    {
+      "slug": "digit-educations",
+      "name": "Digit Educations",
+      "category": "EdTech/Coaching"
+    },
+    {
+      "slug": "it-edge-institute-of-technology",
+      "name": "IT Edge Institute of Technology",
+      "category": "EdTech/Coaching"
+    },
+    {
+      "slug": "max-edutech-solutions",
+      "name": "Max Edutech Solutions",
+      "category": "EdTech/Coaching"
+    },
+    {
+      "slug": "ira-skills",
+      "name": "Ira Skills",
+      "category": "EdTech/Coaching"
+    }
+  ]
