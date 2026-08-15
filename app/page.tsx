@@ -33,13 +33,32 @@ export default function Home() {
       tag: "Custom Web App"
     },
     {
-      title: "L&D Edutech (Thane)",
+      title: "Apex Learning Management System",
       domain: "EdTech & E-Learning",
       solutionType: "Custom LMS & Student Portal",
       description: "Architected a scalable educational platform featuring interactive course tracking, student progress analytics, and automated enrollment pipelines.",
-      link: "https://mydemoagency.vercel.app/demo/ld-edutech-thane",
+      link: "https://mydemoagency.vercel.app/demo/apex-academy",
       image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80",
       tag: "EdTech Platform"
+    },
+    // 👇 NEWLY ADDED DOMAINS 👇
+    {
+      title: "Retail Computer System",
+      domain: "Retail & Consumer Tech",
+      solutionType: "E-Commerce & Inventory Platform",
+      description: "An integrated e-commerce platform built for hardware cataloging, automated inventory tracking, and high-conversion B2C sales.",
+      link: "https://retailcomputersystem.vercel.app",
+      image: "/images/akvtechnologyhomepage.png",
+      tag: "E-Commerce"
+    },
+    {
+      title: "PaintIndia Portal",
+      domain: "Manufacturing & Industrial",
+      solutionType: "B2B Catalog & Dealer Portal",
+      description: "A robust digital storefront engineered for manufacturers to showcase expansive product catalogs and manage B2B dealer inquiries seamlessly.",
+      link: "https://paintindia.vercel.app",
+      image: "/images/paintindiahomepage.png",
+      tag: "B2B Portal"
     }
   ];
 
