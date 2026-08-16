@@ -24,7 +24,7 @@ export default function RealEstateTemplate({ businessName }) {
       {/* Navigation Bar */}
       <nav className="flex justify-between items-center p-6 max-w-7xl mx-auto bg-white/80 backdrop-blur-md sticky top-0 z-40 rounded-b-2xl shadow-sm mb-[-88px]">
         <div className="flex items-center gap-4">
-          <a href="https://mydemoagency.vercel.app" className="text-xs font-bold bg-slate-100 hover:bg-slate-200 text-slate-700 px-3 py-1.5 rounded-lg transition-colors">
+          <a href="/" className="text-xs font-bold bg-slate-100 hover:bg-slate-200 text-slate-700 px-3 py-1.5 rounded-lg transition-colors">
             ← Agency Hub
           </a>
           <span className="text-2xl font-extrabold text-slate-900 tracking-tight">{businessName}</span>

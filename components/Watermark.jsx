@@ -7,9 +7,9 @@ export default function Watermark() {
           <a href="mailto:shivamvishwakarma1432@gmail.com" className="hover:underline">
             📧 shivamvishwakarma1432@gmail.com
           </a>
-          <a href="tel:+917275453956" className="hover:underline">
+          {/* <a href="tel:+917275453956" className="hover:underline">
             📞 +91 72754 53956
-          </a>
+          </a> */}
         </div>
       </footer>
     );

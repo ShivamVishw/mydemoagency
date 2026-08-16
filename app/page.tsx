@@ -10,7 +10,7 @@ export default function Home() {
       domain: "Real Estate & PropTech",
       solutionType: "Custom Property CRM & Portal",
       description: "Engineered bespoke property management software featuring advanced inventory filtering, automated client lead routing, and secure document management.",
-      link: "https://mydemoagency.vercel.app/demo/nivom-realty",
+      link: "/demo/nivom-realty",
       image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80",
       tag: "Enterprise Solution"
     },
@@ -19,7 +19,7 @@ export default function Home() {
       domain: "Beauty & Wellness Tech",
       solutionType: "Automated Booking & Client CRM",
       description: "Developed a custom scheduling application with real-time staff availability tracking, automated WhatsApp confirmations, and client retention analytics.",
-      link: "https://mydemoagency.vercel.app/demo/richy-salon-and-spa",
+      link: "/demo/richy-salon-and-spa",
       image: "https://images.unsplash.com/photo-1522337660859-02fbefca4702?auto=format&fit=crop&w=800&q=80",
       tag: "SaaS Application"
     },
@@ -28,7 +28,7 @@ export default function Home() {
       domain: "Hospitality & Tourism",
       solutionType: "Tailored Reservation Infrastructure",
       description: "Built a high-availability hotel booking engine with dynamic room inventory management, multi-tier pricing calculators, and direct guest inquiry processing.",
-      link: "https://mydemoagency.vercel.app/demo/the-best-hotel-mumbai",
+      link: "/demo/the-best-hotel-mumbai",
       image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=800&q=80",
       tag: "Custom Web App"
     },
@@ -37,7 +37,7 @@ export default function Home() {
       domain: "EdTech & E-Learning",
       solutionType: "Custom LMS & Student Portal",
       description: "Architected a scalable educational platform featuring interactive course tracking, student progress analytics, and automated enrollment pipelines.",
-      link: "https://mydemoagency.vercel.app/demo/apex-academy",
+      link: "/demo/apex-academy",
       image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80",
       tag: "EdTech Platform"
     },

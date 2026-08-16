@@ -49,7 +49,7 @@ export default function SalonTemplate({ businessName }) {
         className="flex justify-between items-center p-4 md:p-6 max-w-7xl mx-auto bg-stone-50/90 backdrop-blur-md sticky top-0 z-40 border-b border-stone-200 shadow-sm mb-[-89px]"
       >
         <div className="flex items-center gap-4">
-          <a href="https://mydemoagency.vercel.app" className="text-xs font-bold uppercase tracking-wider bg-stone-200 hover:bg-stone-300 text-stone-800 px-3 py-1.5 transition-colors">
+          <a href="/" className="text-xs font-bold uppercase tracking-wider bg-stone-200 hover:bg-stone-300 text-stone-800 px-3 py-1.5 transition-colors">
             ← Agency Hub
           </a>
           <div className="text-xl md:text-2xl font-serif font-bold text-stone-900 tracking-tight truncate max-w-[150px] md:max-w-none">{businessName}</div>

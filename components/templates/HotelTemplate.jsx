@@ -50,7 +50,7 @@ export default function HotelTemplate({ businessName }) {
         className="flex justify-between items-center p-4 md:p-6 max-w-7xl mx-auto bg-zinc-900/80 backdrop-blur-md sticky top-0 z-40 border-b border-zinc-800 shadow-lg mb-[-89px]"
       >
         <div className="flex items-center gap-4">
-          <a href="https://mydemoagency.vercel.app" className="text-xs font-medium uppercase tracking-widest bg-zinc-800 hover:bg-zinc-700 text-zinc-300 px-3 py-1.5 transition-colors">
+          <a href="/" className="text-xs font-medium uppercase tracking-widest bg-zinc-800 hover:bg-zinc-700 text-zinc-300 px-3 py-1.5 transition-colors">
             ← Agency Hub
           </a>
           <div className="text-xl md:text-2xl font-serif font-light text-amber-50 tracking-wide truncate max-w-[150px] md:max-w-none">{businessName}</div>
