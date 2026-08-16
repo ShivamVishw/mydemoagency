@@ -37,7 +37,7 @@ export default function Home() {
       domain: "EdTech & E-Learning",
       solutionType: "Custom LMS & Student Portal",
       description: "Architected a scalable educational platform featuring interactive course tracking, student progress analytics, and automated enrollment pipelines.",
-      link: "/demo/apex-academy",
+      link: "/demo/digit-educations",
       image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80",
       tag: "EdTech Platform"
     },
@@ -248,7 +248,7 @@ export default function Home() {
 
       {/* Very Bottom Footer Text */}
       <div className="text-center text-slate-600 text-sm pb-8 relative z-10">
-        © 2026 Shivam Vishwakarma. All Rights Reserved.
+        © 2026 Shivam Web Agency. All Rights Reserved.
       </div>
 
       <Watermark />
